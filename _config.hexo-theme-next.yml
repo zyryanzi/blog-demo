@@ -1,0 +1,40 @@
+scheme: Gemini
+
+footer:
+  icon:
+    name: fas fa-tools
+    color: "#1F23DE"
+    
+# follow_me:
+#   RSS: /atom.xml || fa fa-rss
+
+local_search:
+  enable: true
+
+favicon:
+  small: /images/favicon.png
+
+chat:
+  enable: true
+  service: 
+tidio:
+  enable: true
+  # Public Key, get it from dashboard. See: https://www.tidiochat.com/panel/settings/developer
+  key: pwnnzrxjvggzf74ogaenmvuutqli8lbi
+
+valine:
+  enable: true
+  appid: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
+  appkey: 30pReUEU9dQpvlc8kfxETY6p
+  placeholder: 请留下您宝贵的意见~~
+
+vendors:
+  valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js
+
+# Do not enable both `valine.visitor` and `leancloud_visitors`.
+leancloud_visitors:
+  enable: true
+  app_id: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
+  app_key: 30pReUEU9dQpvlc8kfxETY6p
+
+rss: /atom.xml
