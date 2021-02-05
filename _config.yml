@@ -129,3 +129,13 @@ search:
   field: post
   format: html
   limit: 10000
+
+leancloud_counter_security:
+  enable_sync: false
+#   app_id: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
+#   app_key: 30pReUEU9dQpvlc8kfxETY6p
+#   server_url: http://nontech.top
+#   username:
+#   password:
+
+rss: /atom.xml

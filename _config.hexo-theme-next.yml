@@ -15,8 +15,8 @@ favicon:
   small: /images/favicon.png
 
 chat:
-  enable: true
-  service: 
+  enable: false
+  service: tidio
 tidio:
   enable: true
   # Public Key, get it from dashboard. See: https://www.tidiochat.com/panel/settings/developer
@@ -36,5 +36,6 @@ leancloud_visitors:
   enable: true
   app_id: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
   app_key: 30pReUEU9dQpvlc8kfxETY6p
+  security: false
 
 rss: /atom.xml
