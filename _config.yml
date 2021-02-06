@@ -109,7 +109,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 plugins: hexo-generate-feed
 # theme: landscape
-theme: hexo-theme-next
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
