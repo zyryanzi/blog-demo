@@ -33,7 +33,7 @@ custom_file_path:
   favicon:
     small: source/images/favicon-16x16.png
     medium: source/images/favicon-32x32.png
-
+  # gitalk: source/_data/gitalk.njk
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -87,7 +87,7 @@ menu:
   home: / || fa fa-home
   #about: /about/ || fa fa-user
   #tags: /tags/ || fa fa-tags
-  categories: /categories/ || fa fa-th
+  # categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
@@ -259,7 +259,7 @@ symbols_count_time:
   item_text_total: false
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
-tag_icon: false
+tag_icon: true
 
 # Donate (Sponsor) settings
 # Front-matter variable (unsupport animation).
@@ -397,7 +397,7 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
+  enable: true
   permalink: https://github.com/yourname
   title: Follow me on GitHub
 
@@ -566,7 +566,7 @@ comments:
   style: tabs
   # Choose a comment system to be displayed by default.
   # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
-  active:
+  active: disqus
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
@@ -574,16 +574,16 @@ comments:
   # Modify texts or order for any navs, here are some examples.
   nav:
     #disqus:
-    #  text: Load Disqus
-    #  order: -1
-    #gitalk:
+     text: Load Disqus
+     order: -1
+    # gitalk:
     #  order: -2
 
 # Disqus
 # For more information: https://disqus.com
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: https://nontech.top
   count: true
 
 # DisqusJS
@@ -613,11 +613,12 @@ livere_uid: # <your_uid>
 # For more information: https://gitalk.github.io
 gitalk:
   enable: false
-  github_id: # GitHub repo owner
-  repo: # Repository name to store issues
-  client_id: # GitHub Application Client ID
-  client_secret: # GitHub Application Client Secret
-  admin_user: # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
+  github_id: zyryanzi # GitHub repo owner
+  # id: location.pathname
+  repo: blog-demo-comments # Repository name to store issues
+  client_id: 25a2d542a1a648119f94 # GitHub Application Client ID
+  client_secret: 742c954da67a078f6260e5d442558b504b469cd0 # GitHub Application Client Secret
+  admin_user: zyryanzi # GitHub repo owner and collaborators, only these guys can initialize gitHub issues
   distraction_free_mode: true # Facebook-like distraction free mode
   # Gitalk's display language depends on user's browser or system environment
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
@@ -685,7 +686,7 @@ cloudflare_analytics:
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
   app_key: 30pReUEU9dQpvlc8kfxETY6p
   # Required for apps from CN region
@@ -905,8 +906,10 @@ vendors:
   disqusjs_css:
 
   # Gitalk
-  gitalk_js:
-  gitalk_css:
+  # gitalk_js: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
+  # gitalk_css: https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
+  gitalk_js: https://unpkg.com/gitalk/dist/gitalk.min.js
+  gitalk_css: https://unpkg.com/gitalk/dist/gitalk.css
 
   # Firebase
   firebase_app:
