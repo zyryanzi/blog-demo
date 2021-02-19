@@ -38,9 +38,9 @@ category: 计算机科学
     firewall-cmd --reload（新增之后一定要重载才生效）
     
 
-查看开放端口：
+查看开放的服务和端口：
 
-    firewall-cmd --list-services (不知道看啥)
+    firewall-cmd --list-services
     firewall-cmd --zone=public --list-ports
 
 ## firewalld-cmd其他操作：
