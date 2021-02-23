@@ -9,12 +9,15 @@ categories:
         - nginx
 ---
 
+*在爬楼安装 nginx 的过程中，遇到了不少问题，记录于此，已备不时之需*
+<!--more-->
+
 ## 安装准备
 ### 下载 nginx 源码
     进入目标路径，例如 /usr/local
     yum install -y wget
     wget http://nginx.org/download/nginx-1.9.9.tar.gz
-<!--more-->
+
 ### 检查/安装 gcc(编译器)
     gcc -v
     yum -y install gcc

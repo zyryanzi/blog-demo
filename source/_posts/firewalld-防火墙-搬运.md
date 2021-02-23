@@ -11,6 +11,9 @@ category:
         - 系统
 ---
 
+*他山之玉，补己不足*
+<!--more-->
+
 ## 基本命令：
 
     //启动
@@ -18,7 +21,7 @@ category:
 
     //查看状态
     systemctl status firewalld
-<!--more-->
+
     //停止
     systemctl stop firewalld
 

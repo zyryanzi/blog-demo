@@ -9,10 +9,9 @@ category:
         - 系统
 ---
 
-**centos7 系统**
-**很多年前装的 python2 ；后来又装了python3 ；再后来使用了 pip ，默认包都是给python3用的**
-**python2 的包一直没有更新**
-**在使用 Let's Ecrypt 生成SSL证书时，遇到了版本不兼容的坑**
+*centos7 系统，默认装的 python2，后来又装了python3*
+*使用了 pip，默认包都是给python3用的，python2 的包一直没有更新*
+*在使用 Let's Ecrypt 生成SSL证书时，遇到了版本不兼容的坑*
 <!--more-->
 首先 yum install certbot, yum 源中没有certbot，执行如下命令：
 

@@ -2,6 +2,12 @@
 title: hexo-插入图片
 date: 2021-02-23 09:58:49
 tags:
+    - hexo
+    - hexo-asset-image
+    - hexo 插入图片
+category: 
+    - 计算机科学
+        - hexo
 ---
 
 *今天想要试试在hexo博客中插入图片，按照官方文档试了下没成功，*
