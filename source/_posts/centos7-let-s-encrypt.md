@@ -1,9 +1,13 @@
 ---
 title: centos7 let's encrypt
 date: 2021-02-02 11:17:21
-tags: 别人的宝藏
-category: 计算机科学
-    系统
+tags: 
+    - Linux
+    - https
+    - ssl证书
+category: 
+    - 计算机科学
+        - 系统
 ---
 *转载于：https://my.oschina.net/u/174201/blog/1577784*
 

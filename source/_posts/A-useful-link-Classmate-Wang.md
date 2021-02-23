@@ -1,8 +1,12 @@
 ---
 title: Useful links
 date: 2021-01-30 17:26:03
-tags: 别人的宝藏
-category: 计算机科学
+tags: 
+    - 好看的电影
+    - 好看的书
+    - 通透的知识
+category: 
+    - 计算机科学
 comment: on
 ---
 

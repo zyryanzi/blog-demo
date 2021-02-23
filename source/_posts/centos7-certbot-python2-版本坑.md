@@ -1,9 +1,12 @@
 ---
 title: centos7-certbot-python2-版本坑
 date: 2021-02-03 10:46:17
-tags: 别人的宝藏
-category: 计算机科学
-    系统
+tags: 
+    - Linux
+    - python2
+category: 
+    - 计算机科学
+        - 系统
 ---
 
 **centos7 系统**

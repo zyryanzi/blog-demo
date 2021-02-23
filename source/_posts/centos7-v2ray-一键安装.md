@@ -1,8 +1,13 @@
 ---
 title: centos7 v2ray 一键安装
 date: 2021-02-13 16:48:26
-tags: 计算机科学
-    网络技术
+tags: 
+    - Linux
+    - v2ray
+    - 一键安装
+categories:
+    - 计算机科学
+        - 网络技术
 ---
 
 搞个便宜 vps，研究一下 v2ray，发现大家都在一键搞定，所以也来膜拜一下大神。

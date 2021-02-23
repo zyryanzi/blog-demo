@@ -1,9 +1,13 @@
 ---
 title: git 子模块 submodule 添加-使用-删除
 date: 2021-02-06 10:30:52
-tags: ready-go
-category: 计算机科学
-    git
+tags: 
+    - git
+    - git子模块
+    - submodule
+category: 
+    - 计算机科学
+        - git
 ---
 
 **刚开始搞blog，使用 hexo 的 next 模板的时候，直接从github上拉了代码，这样在我的仓库下面就有了另外一个仓库。为了能尽量避坑，搜索了一些前人的经验，记录于此。**

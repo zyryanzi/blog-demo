@@ -1,8 +1,12 @@
 ---
 title: centos7-nginx-setup
 date: 2021-02-12 18:04:22
-tags: 计算机科学
-    nginx
+tags: 
+    - Linux
+    - nginx
+categories: 
+    - 计算机科学
+        - nginx
 ---
 
 ## 安装准备

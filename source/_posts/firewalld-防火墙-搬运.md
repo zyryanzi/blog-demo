@@ -1,9 +1,14 @@
 ---
 title: firewalld-防火墙 - 搬运
 date: 2021-02-01 16:19:56
-tags: 别人的宝藏
-category: 计算机科学
-    系统
+tags: 
+    - Linux
+    - firewalld
+    - 防火墙
+    - 命令
+category: 
+    - 计算机科学
+        - 系统
 ---
 
 ## 基本命令：
