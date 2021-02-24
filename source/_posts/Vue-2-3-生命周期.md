@@ -4,10 +4,10 @@ date: 2021-02-01 16:56:21
 tags: 
     - vue3
     - vue3变更
-category: 
+categories: 
     - 计算机科学
-        - 前端
-            - Vue
+    - 前端
+    - Vue
 ---
 
 *最近了解了一下vue3，虽然连vue2都不太理解，记录一下也算是为自己打打气*

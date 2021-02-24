@@ -4,9 +4,9 @@ date: 2021-02-03 10:46:17
 tags: 
     - Linux
     - python2
-category: 
+categories: 
     - 计算机科学
-        - 系统
+    - 系统
 ---
 
 *centos7 系统，默认装的 python2，后来又装了python3*

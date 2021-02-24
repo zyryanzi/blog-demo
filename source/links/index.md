@@ -88,7 +88,7 @@ type: "links"
             </div>
             <div class="link-navigation">
                 <div class="card">
-                    <img class="ava nofancybox" src="../images/4k.aa8e6f7.png" />
+                    <img class="ava nofancybox" src="../../images/4k.aa8e6f7.png" />
                     <div class="card-header">
                         <div>
                             <a href="https://dianying4k.com" target="_blank">artist</a>
@@ -99,7 +99,7 @@ type: "links"
             </div>
             <div class="link-navigation">
                 <div class="card">
-                    <img class="ava nofancybox" src="../images/kanshuv.png" />
+                    <img class="ava nofancybox" src="../../images/kanshuv.png" />
                     <div class="card-header">
                         <div>
                             <a href="https://www.kanshuv.com" target="_blank">writer</a>
@@ -114,7 +114,7 @@ type: "links"
             </div>
             <div class="link-navigation">
                 <div class="card">
-                    <img class="ava nofancybox" src="../images/xublog.png"/>
+                    <img class="ava nofancybox" src="../../images/xublog.png"/>
                     <div class="card-header">
                     <div><a href="http://xublog.wang" target="_blank">architect</a> </div>
                     <div class="info">talk is cheap, show me the code</div>

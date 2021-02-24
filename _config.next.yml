@@ -36,8 +36,8 @@ custom_file_path:
 
 # Schemes
 # scheme: Muse
-#scheme: Mist
-#scheme: Pisces
+# scheme: Mist
+# scheme: Pisces
 scheme: Gemini
 
 # Dark Mode
@@ -82,9 +82,9 @@ menu:
   home: / || fa fa-home
   #about: /about/ || fa fa-user
   tags: /tags/ || fa fa-tags
-  # categories: /categories/ || fa fa-th
+  categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  #schedule: /schedule/ || fa fa-calendar
+  # schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
   links: /links/ || fa fa-link
@@ -682,11 +682,11 @@ cloudflare_analytics:
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
   app_key: 30pReUEU9dQpvlc8kfxETY6p
   # Required for apps from CN region
-  server_url: # <your server url>
+  server_url: https://e6mitwil.lc-cn-n1-shared.com
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.

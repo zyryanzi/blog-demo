@@ -6,7 +6,8 @@ tags:
     - nginx
 categories: 
     - 计算机科学
-        - nginx
+    - 网络技术
+    - nginx
 ---
 
 *在爬楼安装 nginx 的过程中，遇到了不少问题，记录于此，已备不时之需*

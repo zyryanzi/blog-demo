@@ -118,15 +118,16 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-- type: git
-  repo: https://github.com/zyryanzi/hexoblogdemo.git
-  branch: master
+# - type: git
+#   repo: https://github.com/zyryanzi/hexoblogdemo.git
+#   branch: master
 - type: sftp
   host: 45.11.3.185
   user: root
   pass: 30IV6v2fzXyARKl31u
   remotePath: /app/hexo/blog/demo/
   port: 22
+# - type: leancloud_counter_security_sync
 
 search:
   path: search.xml
@@ -135,12 +136,12 @@ search:
   limit: 10000
 
 leancloud_counter_security:
-  enable_sync: false
-#   app_id: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
-#   app_key: 30pReUEU9dQpvlc8kfxETY6p
-#   server_url: http://nontech.top
-#   username:
-#   password:
+  enable_sync: true
+  app_id: E6mItwilz3d4OMydXyfmNzOU-gzGzoHsz
+  app_key: 30pReUEU9dQpvlc8kfxETY6p
+  server_url: https://e6mitwil.lc-cn-n1-shared.com # leancloud 提供的 REST API 服务地址，和id、key在同一页面
+  username: uray
+  password: qwer1234
 
 rss: /atom.xml
 

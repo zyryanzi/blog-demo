@@ -5,7 +5,7 @@ tags:
     - 好看的电影
     - 好看的书
     - 通透的知识
-category: 
+categories: 
     - 计算机科学
 comment: on
 ---

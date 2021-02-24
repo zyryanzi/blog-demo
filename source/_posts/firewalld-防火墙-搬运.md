@@ -6,9 +6,9 @@ tags:
     - firewalld
     - 防火墙
     - 命令
-category: 
+categories: 
     - 计算机科学
-        - 系统
+    - 系统
 ---
 
 *他山之玉，补己不足*

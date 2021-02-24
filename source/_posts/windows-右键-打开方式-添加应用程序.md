@@ -4,7 +4,7 @@ date: 2021-02-23 09:27:21
 tags: 
     - 系统
     - windows技巧
-category:
+categories:
     - 计算机科学
     - 系统
 ---
@@ -13,7 +13,7 @@ category:
 <!--more-->
 ### 打开 regedit
     win + r -> 输入 “regedit”
-{% asset_img regedit.jpg 打开 regedit %}
+{% asset_img regedit.jpg open regedit %}
 
 ### 进入 HKEY_CLASSES_ROOT -> * -> shell
 {% asset_img shell.jpg 进入 shell 文件夹 %}

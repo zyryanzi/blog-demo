@@ -5,9 +5,9 @@ tags:
     - Anaconda
     - Python2
     - Python3
-category: 
+categories: 
     - 计算机科学
-        - Python
+    - Python
 ---
 
 *请勿使用 root 用户直接安装*
