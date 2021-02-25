@@ -7,19 +7,19 @@ tags:
 *都听人说黑群晖，自己也搭一个试试（挺麻烦，过程以后再写），虽然一直开着费电，不过练习一下还是蛮有趣。*
 *搭好之后，用一个免费的局域网软件和自己的手机连上了，但是很不稳定，于是研究下 frp，看看能不能取得更好的效果*
 <!--more-->
-### 服务器上下载最新release的 frp
+### 服务端安装配置
+#### 服务器上下载最新release的 frp
 首先有台有外网（外部网络）IP的服务器，我的是Centos7系统的，进入 /usr/local 目录
 （我也不知道为啥进这里，因为别人都进这）
 
     wget https://github.com/fatedier/frp/releases/download/v0.35.1/frp_0.35.1_linux_amd64.tar.gz
 {% asset_img download.jpg 下载 %}
 
-### 解压文件并进入之
+#### 解压文件并进入之
     tar -vxf frp_0.35.1_linux_amd64.tar.gz
     cd frp_0.35.1_linux_amd64
 {% asset_img tar.jpg 解压 %}
 
-### 编辑 frps.ini 和 frpc.ini（为啥要编辑 frpc.ini ？）
 #### 编辑 frps.ini
     vim frps.ini
 {% asset_img frpsini.jpg 编辑 frps.ini %}
@@ -37,24 +37,7 @@ tags:
 vhost_http_port 原来是80，我在启动的时候，报冲突，于是改了一个，记住就好，待会要配到frpc.ini；
 auth_token 自己改下就行我还不知道哪里用到，回头再补充；
 
-#### 编辑 frpc.ini （不是很清楚为什么在服务端要配置客户端的配置）
-    vim frpc.ini
-{% asset_img frpc.ini.jpg 编辑 frpc.ini %}
-
-    [common]
-    server_addr = 10.10.10.10       # 外部网服务器ip
-    server_port = 7000              # 上面 frps.ini 中配置的 frp 服务端口
-    auth_token = qwer1234           # 没用上
-    [web]                           # 和上面配置的一样
-    type = tcp                      # 
-    local_ip = 127.0.0.1
-    local_port = 8080               # 想要的内网服务端口
-    remote_port = 6000              # 服务端配置的 客户端代理的端口
-
-这里 server_addr 就是服务端的外网IP；local_port 我就对应了 frps.ini 的vhost_http_port;
-auth_token 和上面填一样就好。
-
-### 配置 frp.service
+#### 配置 frp.service
     vim /usr/lib/systemd/system/frp.service
 {% asset_img frp.service.jpg frp.service %}
     [Unit]
@@ -76,7 +59,7 @@ auth_token 和上面填一样就好。
 
 将your_folder_name更换为自己frp文件夹
 
-### 启动服务端
+#### 启动服务端
     systemctl start frp
     systemctl status frp
 {% asset_img frps_suc.jpg 成功启动 %}
@@ -93,13 +76,13 @@ auth_token 和上面填一样就好。
 {% asset_img win_frpcini.jpg 编辑win_frpc.ini %}
 
     [common]
-    server_addr = 10.10.10.10       # 和上面的配置一样
-    server_port = 7000              # 和上面的配置一样
-    [web]                           # 和上面的配置一样
-    type = http                     # 这里改成 http
-    local_ip = 127.0.0.1
-    local_port = 8080               # 本地要暴露的服务
-    remote_port = 10101             # http访问的端口
+    server_addr = 10.10.10.10       # 外部服务器 IP
+    server_port = 7000              # frp 服务的端口
+    [web]                           # 和上面的配置一样名称
+    type = http                     # 这里改成 http（不明所以）
+    local_ip = 127.0.0.1            # 本机 IP
+    local_port = 8080               # 内网要暴露的服务端口
+    remote_port = 10101             # http 访问的端口
     custom_domains = 10.10.10.10    # 外部网IP或域名
 
 server_addr 就是你的服务端外网IP
@@ -115,4 +98,4 @@ custom_domains 可以填入外部网ip
 再次执行命令，成功启动了。
 
 至此完成，后续补充~~~
-
+访问：10.10.10.10:10101 即可访问到内网服务
