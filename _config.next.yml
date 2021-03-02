@@ -829,8 +829,8 @@ nprogress:
 # Canvas ribbon
 # For more information: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
-  enable: false
-  size: 300 # The width of the ribbon
+  enable: true
+  size: 90 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
 
@@ -930,7 +930,7 @@ vendors:
   nprogress_css:
 
   # Canvas ribbon
-  canvas_ribbon:
+  canvas_ribbon: /js/ribbon/ribbon.js
 
 # Assets
 # Accelerate delivery of static files using a CDN

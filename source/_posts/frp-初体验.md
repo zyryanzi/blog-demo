@@ -145,7 +145,7 @@ custom_domains 与server_addr一致
 因为多台内网设备都要使用，因此需要将*.[subdomain].mydomain.com在你的域名服务商做一个 A 解析即可。
 并且将 *.[subdomain].mydomain.com 加入服务端nginx监听中，然后重定向到服务端的 frps 的 vhost_http_port 字段
     server {
-        listen          10101;
+        listen          10100; #用于外部访问的端口
         server_name     *.[subdomain].mydomain.com #这里是重点
         location / {
             proxy_redirect          off;
@@ -164,4 +164,4 @@ custom_domains 与server_addr一致
         }
     }
 
-如此，重启服务和客户端，访问 [name].[subdomain].mydomain.com:10101 即可访问到 内网 8080 的服务 
+如此，重启服务和客户端，访问 [name].[subdomain].mydomain.com:10100 即可访问到 内网 8080 的服务 
