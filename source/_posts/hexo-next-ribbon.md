@@ -6,7 +6,7 @@ tags:
     - theme-next
     - ribbon
 categories:
-    - 计算机技术
+    - 计算机科学
     - hexo
 ---
 

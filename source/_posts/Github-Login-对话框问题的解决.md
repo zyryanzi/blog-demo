@@ -6,7 +6,7 @@ tags:
     - login
     - 小技巧
 categories:
-    - 计算机技术
+    - 计算机科学
     - git
 ---
 
