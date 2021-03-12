@@ -2,8 +2,7 @@
 title: Github Login 对话框问题的解决
 date: 2021-03-02 17:29:05
 tags: 
-    - git
-    - login
+    - github
     - 小技巧
 categories:
     - 计算机科学
