@@ -175,6 +175,29 @@ jekins 的插件很丰富，可以访问这里查看下载：http://updates.jenk
 {% asset_img tool_git.jpg git 配置 %}
 {% asset_img tool_maven.jpg maven 配置 %}
 
+##### 开始使用
+**jekins 任务新建**
+在新建任务页面，输入任务名称，并选择`构建一个自由风格的软件项目`，然后点确定，
+
+**源码管理**
+在接下来的页面中，配置源码路径，将需要部署的服务代码的git地址填入，例如
+
+    https://github.com/yourname/programname.git
+
+并且指定分支，如 */master
+**构建触发器**
+{% asset_img build_trigger.jpg %}
+此处`H/15 * * * *`中的`15`表示15分钟，自动检查git代码，有更新则自动构建
+
+**构建环境**
+通常选择第一和第三项，构建之前清空工作空间，在日志中加入时间戳
+
+**构建 shell 脚本**
+注意Execute Shell的命令的执行路径需要写绝对路径或在Jenkins中为该命令设置环境变量。
+pylint不能用虚拟环境的pylint，否则可能报错。
+对于路径问题，可以通过which virtualenv来找到virtualenv在持续集成服务器具体的路径，然后在Jenkins设置环境变量，
+设置路径是Jenkins主页=>系统管理=>系统设置=>全局属性
+
 ### Tips
 下载可以使用 wget [url]
 查找程序位置可以使用 whereis [name] 或 find [path] -name [name]
