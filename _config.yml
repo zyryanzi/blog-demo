@@ -122,11 +122,11 @@ deploy:
 #   repo: https://github.com/zyryanzi/hexoblogdemo.git
 #   branch: master
 - type: sftp
-  host: 45.11.3.185
+  host: 23.105.198.209
   user: root
-  pass: 30IV6v2fzXyARKl31u
+  pass: 0C0Pj18MWiGA
   remotePath: /app/hexo/blog/demo/
-  port: 22
+  port: 26901
 # - type: leancloud_counter_security_sync
 
 search:
