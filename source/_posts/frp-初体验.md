@@ -2,6 +2,12 @@
 title: frp-初体验
 date: 2021-02-25 09:53:12
 tags:
+    - frp
+    - 内网穿透
+    - 多个内网服务
+categories:
+    - 计算机科学
+    - 网络技术
 ---
 
 *都听人说黑群晖，自己也搭一个试试（挺麻烦，过程以后再写），虽然一直开着费电，不过练习一下还是蛮有趣。*
@@ -22,7 +28,6 @@ tags:
 
 #### 编辑 frps.ini
     vim frps.ini
-{% asset_img frpsini.jpg 编辑 frps.ini %}
 
     [common]
     bind_port = 7000            # frp在服务端机器的端口
@@ -30,16 +35,12 @@ tags:
     dashboard_port = 7003       # frp控制台端口
     dashboard_user = admin      # frp控制台用户名
     dashboard_pwd = admin       # frp控制台访问密码
-    [web]                       # 代理名称，与客户端设置一致
-    listen_port = 6000          # 服务端配置客户端 代理的端口（好绕）
-    auth_token = auth_code      # 我没用上
 
-vhost_http_port 原来是80，我在启动的时候，报冲突，于是改了一个，记住就好，待会要配到frpc.ini；
-auth_token 自己改下就行我还不知道哪里用到，回头再补充；
+vhost_http_port 原来是80，我在启动的时候，报冲突，于是改了一个，记住就好，待会要配到frpc.ini
 
 #### 配置 frp.service
     vim /usr/lib/systemd/system/frp.service
-{% asset_img frp.service.jpg frp.service %}
+    
     [Unit]
     Description=The nginx HTTP and reverse proxy server
     After=network.target remote-fs.target nss-lookup.target
@@ -73,7 +74,6 @@ auth_token 自己改下就行我还不知道哪里用到，回头再补充；
 {% asset_img win_frp.jpg win解压 %}
 
 #### 编辑 frpc.ini
-{% asset_img win_frpcini.jpg 编辑win_frpc.ini %}
 
     [common]
     server_addr = 10.10.10.10       # 外部服务器 IP
@@ -87,7 +87,7 @@ auth_token 自己改下就行我还不知道哪里用到，回头再补充；
 
 server_addr 就是你的服务端外网IP
 type 改为http
-custom_domains 可以填入外部网ip
+custom_domains 与server_addr一致
 
 #### 启动
 完成编辑，就可以启动了，进入frp的根目录，执行：
@@ -97,5 +97,71 @@ custom_domains 可以填入外部网ip
 
 再次执行命令，成功启动了。
 
-至此完成，后续补充~~~
 访问：10.10.10.10:10101 即可访问到内网服务
+至此完成，后续补充~~~
+
+## 补充
+使用frp几天，简直太方便，但是也慢慢感觉到有更多的需要。
+家里的机器也需要内网穿透暴露一些服务，于是读了读大神们的文章。
+如何使用一台 frps 穿透多个 frpc。
+这里要使用到二级域名。
+
+### 修改服务端 frps.ini
+    [common]
+    bind_port = 7000
+    vhost_http_port = 10101
+    # 控制台
+    dashboard_port = 7003
+    dashboard_user = admin
+    dashboard_pwd = admin
+    # token验证
+    privilege_token = frp
+    # 连接池
+    max_pool_count = 5
+    # 日志
+    log_file = ./frps.log
+    log_level = info
+    log_max_days = 3
+    # 自定义二级域名
+    subdomain_host = [subdomain].mydomain.com
+新添加的 subdomain_host 配置为 [subdomain].mydomain.com，这里mydomain.com 是解析到你服务器ip的
+
+### 修改客户端 frpc.ini
+    [common]
+    server_addr = 10.10.10.10
+    server_port = 7000
+    privilege_token = frp
+
+    [web]
+    type = http
+    local_ip = 127.0.0.1
+    local_port = 8080
+    # remote_port = 10101
+    # custom_domains = 10.10.10.10
+    subdomain = [name]
+新添加的 subdomain，自己取个名字即可
+
+### 二级域名解析
+因为多台内网设备都要使用，因此需要将*.[subdomain].mydomain.com在你的域名服务商做一个 A 解析即可。
+并且将 *.[subdomain].mydomain.com 加入服务端nginx监听中，然后重定向到服务端的 frps 的 vhost_http_port 字段
+    server {
+        listen          10100; #用于外部访问的端口
+        server_name     *.[subdomain].mydomain.com #这里是重点
+        location / {
+            proxy_redirect          off;
+            proxy_set_header        Host            $host:$server_port;
+            proxy_set_header        X-Forwarded-For $remote_addr;
+            client_max_body_size    20m;
+            client_body_buffer_size 128k;
+            proxy_connect_timeout   600;
+            proxy_send_timeout      600;
+            proxy_read_timeout      900;
+            proxy_buffer_size       4k;
+            proxy_buffers           4 32k;
+            proxy_busy_buffers_size 64k;
+            proxy_temp_file_write_size 64k;
+            proxy_pass http://127.0.0.1:10101/; #这里是重点
+        }
+    }
+
+如此，重启服务和客户端，访问 [name].[subdomain].mydomain.com:10100 即可访问到 内网 8080 的服务 

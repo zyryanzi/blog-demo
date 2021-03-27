@@ -121,6 +121,15 @@ type: "links"
                     </div>
                 </div>
             </div>
+            <div class="link-navigation">
+                <div class="card">
+                    <img class="ava nofancybox" src="../../images/computer_tech_book.jpg"/>
+                    <div class="card-header">
+                    <div><a href="https://github.com/itdevbooks/pdf" target="_blank">Feng Lei</a> </div>
+                    <div class="info">书山有路于此，学海无涯向前</div>
+                    </div>
+                </div>
+            </div>
 
             {{ page.content }}
             </div>

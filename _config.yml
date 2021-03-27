@@ -30,7 +30,7 @@ link_dir: links
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: js/**
 
 # links_dir: links
 # links_title: 友情链接 # 友链总标题

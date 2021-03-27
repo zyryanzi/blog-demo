@@ -3,7 +3,7 @@ title: windows-右键-打开方式-添加应用程序
 date: 2021-02-23 09:27:21
 tags: 
     - 系统
-    - windows技巧
+    - 小技巧
 categories:
     - 计算机科学
     - 系统

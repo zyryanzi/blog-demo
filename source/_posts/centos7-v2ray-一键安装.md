@@ -4,7 +4,6 @@ date: 2021-02-13 16:48:26
 tags: 
     - Linux
     - v2ray
-    - 一键安装
 categories:
     - 计算机科学
     - 网络技术
