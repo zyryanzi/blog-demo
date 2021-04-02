@@ -6,6 +6,7 @@ tags:
     - Python3
     - OpenCV
 categories:
+    - 计算机科学
     - Linux
     - Python
 ---

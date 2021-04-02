@@ -2,12 +2,12 @@
 title: windows10-关闭自动更新摸索
 date: 2021-03-03 11:04:07
 tags:
-    - windows
+    - Windows
     - 小技巧
     - 自动更新
 categories:
     - 计算机科学
-    - windows
+    - Windows
 ---
 
 *天下苦秦久矣，苦windows更新亦久矣……*

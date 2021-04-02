@@ -3,8 +3,7 @@ title: git 子模块 submodule 添加-使用-删除
 date: 2021-02-06 10:30:52
 tags: 
     - git
-    - git子模块
-    - submodule
+    - git-submodule
 categories: 
     - 计算机科学
     - git

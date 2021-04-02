@@ -3,8 +3,7 @@ title: hexo-next 使用tags、categories等菜单
 date: 2021-02-23 17:56:22
 tags:
     - hexo
-    - next
-    - menu
+    - theme-next
 categories:
     - 计算机科学
     - hexo

@@ -2,7 +2,7 @@
 title: Win10-Nexus
 date: 2021-03-15 14:04:12
 tags:
-    - Windows10
+    - Windows
     - Nexus
     - Maven
 categories:
