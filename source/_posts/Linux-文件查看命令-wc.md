@@ -5,7 +5,7 @@ tags:
     - wc
 
 categories:
-    - Linux
+    - 计算机科学
     - 小技巧
 ---
 
